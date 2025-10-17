@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=3 uid="uid://h36xdtam47wj"]
+
+[ext_resource type="Texture2D" uid="uid://dw4jbrduipofc" path="res://sprites/icon_blue.svg" id="1_hr8ix"]
+[ext_resource type="Script" uid="uid://3r8wx5wg8psd" path="res://Scripts/Icons.gd" id="2_s4n2h"]
+[ext_resource type="Texture2D" uid="uid://d4lauovvesmfj" path="res://sprites/icon_green.svg" id="3_w2ah8"]
+[ext_resource type="Texture2D" uid="uid://bvi4u6vaeise" path="res://sprites/icon_pink.svg" id="4_6hu23"]
+[ext_resource type="Texture2D" uid="uid://bee5l7ww4tvmh" path="res://sprites/icon_red.svg" id="5_6lk87"]
+[ext_resource type="Texture2D" uid="uid://cgscbwmttdfv5" path="res://sprites/icon_white.svg" id="6_4dmjl"]
+[ext_resource type="Texture2D" uid="uid://choo32ob3c0wp" path="res://sprites/icon_yellow.svg" id="7_6awxa"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="Icons" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("1_hr8ix")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_s4n2h")
+Name = "Janela Azul"
+metadata/_custom_type_script = "uid://3r8wx5wg8psd"
+
+[node name="Icons2" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("3_w2ah8")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_s4n2h")
+Name = "Janela Verde"
+metadata/_custom_type_script = "uid://3r8wx5wg8psd"
+
+[node name="Icons3" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("4_6hu23")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_s4n2h")
+Name = "Janela Rosa"
+metadata/_custom_type_script = "uid://3r8wx5wg8psd"
+
+[node name="Icons4" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("5_6lk87")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_s4n2h")
+Name = "Janela Vermelha"
+metadata/_custom_type_script = "uid://3r8wx5wg8psd"
+
+[node name="Icons5" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("6_4dmjl")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_s4n2h")
+Name = "Janela Branca"
+metadata/_custom_type_script = "uid://3r8wx5wg8psd"
+
+[node name="Icons6" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("7_6awxa")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_s4n2h")
+Name = "Janela Amarela"
+metadata/_custom_type_script = "uid://3r8wx5wg8psd"
