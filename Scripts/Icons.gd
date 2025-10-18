@@ -2,8 +2,8 @@ extends TextureButton
 class_name Icons
 
 @export var Name : String
-@export var Janela : Control
-@export var Botao : TextureButton
+var JanelaPadrao = preload("res://Recursos/JanelaPadrao.tscn")
+@export var node_janelas : Control
 
 func _init(p_name = "Null"):
 	Name = p_name
@@ -13,3 +13,7 @@ func _ready() -> void:
 	
 func _callNameButton():
 	print("Nome do botao é ", Name)
+	var janela = JanelaPadrao.instantiate()
+	node_janelas.add_child(janela)
+	janela._criado(Name)
+	

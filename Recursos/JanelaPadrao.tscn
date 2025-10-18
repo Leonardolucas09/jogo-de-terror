@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctf1rx04hb2ln"]
+
+[ext_resource type="Script" uid="uid://d22ndn8yq0urn" path="res://Cenas/janelaPadrao.gd" id="1_cekff"]
+[ext_resource type="Texture2D" uid="uid://cgscbwmttdfv5" path="res://sprites/icon_white.svg" id="2_nowvy"]
+[ext_resource type="Texture2D" uid="uid://dw4jbrduipofc" path="res://sprites/icon_blue.svg" id="3_42s2y"]
+[ext_resource type="Texture2D" uid="uid://bee5l7ww4tvmh" path="res://sprites/icon_red.svg" id="4_fqa4v"]
+
+[node name="Janela" type="PanelContainer" node_paths=PackedStringArray("Titulo")]
+clip_contents = true
+offset_left = 310.0
+offset_top = 179.0
+offset_right = 627.0
+offset_bottom = 464.0
+script = ExtResource("1_cekff")
+Titulo = NodePath("VBoxContainer/HBoxContainer/Titulo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+alignment = 2
+
+[node name="Titulo" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "texto brabo"
+
+[node name="MinimizarIcone" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+texture_normal = ExtResource("2_nowvy")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MaximizarIcone" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_42s2y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FecharIcone" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+texture_normal = ExtResource("4_fqa4v")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/FecharIcone" to="." method="_on_fechar_icone_button_down"]

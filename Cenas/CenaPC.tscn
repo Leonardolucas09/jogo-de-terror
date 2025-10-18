@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://h36xdtam47wj"]
+[gd_scene load_steps=9 format=3 uid="uid://h36xdtam47wj"]
 
 [ext_resource type="Texture2D" uid="uid://dw4jbrduipofc" path="res://sprites/icon_blue.svg" id="1_hr8ix"]
 [ext_resource type="Script" uid="uid://3r8wx5wg8psd" path="res://Scripts/Icons.gd" id="2_s4n2h"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bee5l7ww4tvmh" path="res://sprites/icon_red.svg" id="5_6lk87"]
 [ext_resource type="Texture2D" uid="uid://cgscbwmttdfv5" path="res://sprites/icon_white.svg" id="6_4dmjl"]
 [ext_resource type="Texture2D" uid="uid://choo32ob3c0wp" path="res://sprites/icon_yellow.svg" id="7_6awxa"]
+[ext_resource type="PackedScene" uid="uid://ctf1rx04hb2ln" path="res://Recursos/JanelaPadrao.tscn" id="8_6hu23"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -27,7 +28,7 @@ grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 
-[node name="Icons" type="TextureButton" parent="HBoxContainer"]
+[node name="Icons" type="TextureButton" parent="HBoxContainer" node_paths=PackedStringArray("node_janelas")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture_normal = ExtResource("1_hr8ix")
@@ -35,9 +36,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_s4n2h")
 Name = "Janela Azul"
+node_janelas = NodePath("../../Janelas")
 metadata/_custom_type_script = "uid://3r8wx5wg8psd"
 
-[node name="Icons2" type="TextureButton" parent="HBoxContainer"]
+[node name="Icons2" type="TextureButton" parent="HBoxContainer" node_paths=PackedStringArray("node_janelas")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture_normal = ExtResource("3_w2ah8")
@@ -45,9 +47,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_s4n2h")
 Name = "Janela Verde"
+node_janelas = NodePath("../../Janelas")
 metadata/_custom_type_script = "uid://3r8wx5wg8psd"
 
-[node name="Icons3" type="TextureButton" parent="HBoxContainer"]
+[node name="Icons3" type="TextureButton" parent="HBoxContainer" node_paths=PackedStringArray("node_janelas")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture_normal = ExtResource("4_6hu23")
@@ -55,9 +58,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_s4n2h")
 Name = "Janela Rosa"
+node_janelas = NodePath("../../Janelas")
 metadata/_custom_type_script = "uid://3r8wx5wg8psd"
 
-[node name="Icons4" type="TextureButton" parent="HBoxContainer"]
+[node name="Icons4" type="TextureButton" parent="HBoxContainer" node_paths=PackedStringArray("node_janelas")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture_normal = ExtResource("5_6lk87")
@@ -65,9 +69,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_s4n2h")
 Name = "Janela Vermelha"
+node_janelas = NodePath("../../Janelas")
 metadata/_custom_type_script = "uid://3r8wx5wg8psd"
 
-[node name="Icons5" type="TextureButton" parent="HBoxContainer"]
+[node name="Icons5" type="TextureButton" parent="HBoxContainer" node_paths=PackedStringArray("node_janelas")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture_normal = ExtResource("6_4dmjl")
@@ -75,9 +80,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_s4n2h")
 Name = "Janela Branca"
+node_janelas = NodePath("../../Janelas")
 metadata/_custom_type_script = "uid://3r8wx5wg8psd"
 
-[node name="Icons6" type="TextureButton" parent="HBoxContainer"]
+[node name="Icons6" type="TextureButton" parent="HBoxContainer" node_paths=PackedStringArray("node_janelas")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture_normal = ExtResource("7_6awxa")
@@ -85,4 +91,24 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_s4n2h")
 Name = "Janela Amarela"
+node_janelas = NodePath("../../Janelas")
 metadata/_custom_type_script = "uid://3r8wx5wg8psd"
+
+[node name="Janela" parent="." instance=ExtResource("8_6hu23")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.5
+offset_top = -142.5
+offset_right = 158.5
+offset_bottom = 142.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Janelas" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
