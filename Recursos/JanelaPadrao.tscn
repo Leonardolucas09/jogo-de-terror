@@ -7,10 +7,8 @@
 
 [node name="Janela" type="PanelContainer" node_paths=PackedStringArray("Titulo")]
 clip_contents = true
-offset_left = 310.0
-offset_top = 179.0
-offset_right = 627.0
-offset_bottom = 464.0
+offset_right = 317.0
+offset_bottom = 285.0
 script = ExtResource("1_cekff")
 Titulo = NodePath("VBoxContainer/HBoxContainer/Titulo")
 

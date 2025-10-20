@@ -17,84 +17,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -50.0
 grow_horizontal = 2
-grow_vertical = 0
-alignment = 1
+grow_vertical = 2
+alignment = 2
 
-[node name="Icons" type="TextureButton" parent="HBoxContainer" node_paths=PackedStringArray("node_janelas")]
-custom_minimum_size = Vector2(50, 50)
+[node name="Janelas" type="Control" parent="VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("1_hr8ix")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("2_s4n2h")
-Name = "Janela Azul"
-node_janelas = NodePath("../../Janelas")
-metadata/_custom_type_script = "uid://3r8wx5wg8psd"
+size_flags_vertical = 3
 
-[node name="Icons2" type="TextureButton" parent="HBoxContainer" node_paths=PackedStringArray("node_janelas")]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-texture_normal = ExtResource("3_w2ah8")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("2_s4n2h")
-Name = "Janela Verde"
-node_janelas = NodePath("../../Janelas")
-metadata/_custom_type_script = "uid://3r8wx5wg8psd"
-
-[node name="Icons3" type="TextureButton" parent="HBoxContainer" node_paths=PackedStringArray("node_janelas")]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-texture_normal = ExtResource("4_6hu23")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("2_s4n2h")
-Name = "Janela Rosa"
-node_janelas = NodePath("../../Janelas")
-metadata/_custom_type_script = "uid://3r8wx5wg8psd"
-
-[node name="Icons4" type="TextureButton" parent="HBoxContainer" node_paths=PackedStringArray("node_janelas")]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-texture_normal = ExtResource("5_6lk87")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("2_s4n2h")
-Name = "Janela Vermelha"
-node_janelas = NodePath("../../Janelas")
-metadata/_custom_type_script = "uid://3r8wx5wg8psd"
-
-[node name="Icons5" type="TextureButton" parent="HBoxContainer" node_paths=PackedStringArray("node_janelas")]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-texture_normal = ExtResource("6_4dmjl")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("2_s4n2h")
-Name = "Janela Branca"
-node_janelas = NodePath("../../Janelas")
-metadata/_custom_type_script = "uid://3r8wx5wg8psd"
-
-[node name="Icons6" type="TextureButton" parent="HBoxContainer" node_paths=PackedStringArray("node_janelas")]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-texture_normal = ExtResource("7_6awxa")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("2_s4n2h")
-Name = "Janela Amarela"
-node_janelas = NodePath("../../Janelas")
-metadata/_custom_type_script = "uid://3r8wx5wg8psd"
-
-[node name="Janela" parent="." instance=ExtResource("8_6hu23")]
+[node name="Janela" parent="VBoxContainer/Janelas" instance=ExtResource("8_6hu23")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -102,13 +38,80 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -158.5
-offset_top = -142.5
+offset_top = -115.5
 offset_right = 158.5
-offset_bottom = 142.5
+offset_bottom = 169.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Janelas" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Icons" type="TextureButton" parent="VBoxContainer/PanelContainer/HBoxContainer" node_paths=PackedStringArray("node_janelas")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("1_hr8ix")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_s4n2h")
+Name = "Janela Azul"
+node_janelas = NodePath("../../../Janelas")
+metadata/_custom_type_script = "uid://3r8wx5wg8psd"
+
+[node name="Icons2" type="TextureButton" parent="VBoxContainer/PanelContainer/HBoxContainer" node_paths=PackedStringArray("node_janelas")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("3_w2ah8")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_s4n2h")
+Name = "Janela Verde"
+node_janelas = NodePath("../../../Janelas")
+metadata/_custom_type_script = "uid://3r8wx5wg8psd"
+
+[node name="Icons3" type="TextureButton" parent="VBoxContainer/PanelContainer/HBoxContainer" node_paths=PackedStringArray("node_janelas")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("4_6hu23")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_s4n2h")
+Name = "Janela Rosa"
+node_janelas = NodePath("../../../Janelas")
+metadata/_custom_type_script = "uid://3r8wx5wg8psd"
+
+[node name="Icons4" type="TextureButton" parent="VBoxContainer/PanelContainer/HBoxContainer" node_paths=PackedStringArray("node_janelas")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("5_6lk87")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_s4n2h")
+Name = "Janela Vermelha"
+node_janelas = NodePath("../../../Janelas")
+metadata/_custom_type_script = "uid://3r8wx5wg8psd"
+
+[node name="Icons5" type="TextureButton" parent="VBoxContainer/PanelContainer/HBoxContainer" node_paths=PackedStringArray("node_janelas")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("6_4dmjl")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_s4n2h")
+Name = "Janela Branca"
+node_janelas = NodePath("../../../Janelas")
+metadata/_custom_type_script = "uid://3r8wx5wg8psd"
+
+[node name="Icons6" type="TextureButton" parent="VBoxContainer/PanelContainer/HBoxContainer" node_paths=PackedStringArray("node_janelas")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("7_6awxa")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_s4n2h")
+Name = "Janela Amarela"
+node_janelas = NodePath("../../../Janelas")
+metadata/_custom_type_script = "uid://3r8wx5wg8psd"
