@@ -1,14 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctf1rx04hb2ln"]
+[gd_scene load_steps=6 format=3 uid="uid://ctf1rx04hb2ln"]
 
 [ext_resource type="Script" uid="uid://d22ndn8yq0urn" path="res://Cenas/janelaPadrao.gd" id="1_cekff"]
 [ext_resource type="Texture2D" uid="uid://cgscbwmttdfv5" path="res://sprites/icon_white.svg" id="2_nowvy"]
 [ext_resource type="Texture2D" uid="uid://dw4jbrduipofc" path="res://sprites/icon_blue.svg" id="3_42s2y"]
 [ext_resource type="Texture2D" uid="uid://bee5l7ww4tvmh" path="res://sprites/icon_red.svg" id="4_fqa4v"]
+[ext_resource type="PackedScene" uid="uid://d1jj5g136x4wc" path="res://Recursos/Janela Padrao Design.tscn" id="5_nowvy"]
 
 [node name="Janela" type="PanelContainer" node_paths=PackedStringArray("Titulo")]
 clip_contents = true
-offset_right = 317.0
-offset_bottom = 285.0
+offset_right = 300.0
+offset_bottom = 300.0
 script = ExtResource("1_cekff")
 Titulo = NodePath("VBoxContainer/HBoxContainer/Titulo")
 
@@ -25,6 +26,8 @@ alignment = 2
 layout_mode = 2
 size_flags_horizontal = 3
 text = "texto brabo"
+autowrap_trim_flags = 0
+clip_text = true
 
 [node name="MinimizarIcone" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(23, 0)
@@ -54,5 +57,11 @@ size_flags_vertical = 3
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/PanelContainer"]
 layout_mode = 2
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 2
+
+[node name="Control" parent="VBoxContainer/PanelContainer/ScrollContainer" instance=ExtResource("5_nowvy")]
+layout_mode = 2
+size_flags_horizontal = 3
 
 [connection signal="button_down" from="VBoxContainer/HBoxContainer/FecharIcone" to="." method="_on_fechar_icone_button_down"]

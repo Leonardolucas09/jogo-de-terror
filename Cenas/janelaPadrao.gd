@@ -11,6 +11,8 @@ var ResizeY : bool # Booleanos que vão nos ajudar a saber em qual direção est
 var InitialSize : Vector2 # Vetor com o tamanho inicial da janela
 @export var grabThreshold := 25 # Espaço que o mouse vai detectar a possibilidade de mover a tela
 @export var resizeThreshold := 5 # Espaço que o moude vai detectar a possiblidade de dimensionar a tela
+@export var minLargura := 200 # Largura minimo que a Janela pode ter
+@export var minAltura := 200 # Altura minimo que a Janela pode ter
 
 func _criado(_name="sem Nome"): # Função que sera chamada pelo icone para setar as infomações iniciais
 	Titulo.text = name
@@ -63,15 +65,15 @@ func _input(event): #função chamada quando um evento acontece
 			var newLargura = get_size().x # Cria uma nova variavel com o tamanho atual da Janela
 			var newAltura = get_size().y # --
 			
-			if ResizeX:
+			if ResizeX && (InitialSize.x - (start.x - event.position.x)) >= minLargura && initialPosition.x == 0:
 				newLargura = InitialSize.x - (start.x - event.position.x) # Adiciona a diferença da posição inicial do mouse menos sua posição atual na variavel
-			if ResizeY:
+			if ResizeY && (InitialSize.y - (start.y - event.position.y)) >= minAltura && initialPosition.y == 0:
 				newAltura = InitialSize.y - (start.y - event.position.y) # --
 			
-			if initialPosition.x != 0: # Condição chamada apenas quando estamos redimencionando a lateral esquerda
+			if initialPosition.x != 0 && (InitialSize.x + (start.x - event.position.x)) >= minLargura: # Condição chamada apenas quando estamos redimencionando a lateral esquerda
 				newLargura = InitialSize.x + (start.x - event.position.x) 
 				set_position(Vector2(initialPosition.x - (newLargura - InitialSize.x), get_position().y))
-			if initialPosition.y != 0: # Condição chamada apenas quando estamos redimencionando a borda superior
+			if initialPosition.y != 0 && (InitialSize.y + (start.y - event.position.y)) >= minAltura: # Condição chamada apenas quando estamos redimencionando a borda superior
 				newAltura = InitialSize.y + (start.y - event.position.y)
 				set_position(Vector2(get_position().y, initialPosition.y - (newAltura - InitialSize.y)))
 			
