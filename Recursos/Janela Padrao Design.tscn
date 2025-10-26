@@ -5,20 +5,20 @@
 [ext_resource type="Texture2D" uid="uid://d4lauovvesmfj" path="res://sprites/icon_green.svg" id="3_hpvtw"]
 
 [node name="Control" type="Control"]
-clip_contents = true
-custom_minimum_size = Vector2(1000, 1000)
+custom_minimum_size = Vector2(1000, 10000)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1155.0
-offset_bottom = 1216.0
-size_flags_horizontal = 0
-size_flags_vertical = 2
+offset_bottom = 1178.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 920.0
+offset_bottom = 1184.0
 grow_horizontal = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]

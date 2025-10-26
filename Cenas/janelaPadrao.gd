@@ -1,6 +1,7 @@
 extends PanelContainer
 
 @export var Titulo : Label
+@export var Titulotest : String
 
 var start : Vector2 # Vetor que vai receber a posição inicial do mouse 
 var initialPosition : Vector2 # Vetor que vai receber a posição inicial da Janela, expecificamente a posição superior esquerdo
@@ -23,12 +24,15 @@ func _set_name(_name="null"): # Função usada para setar um novo nome para a ja
 func _on_fechar_icone_button_down() -> void: # Função que é ativada quando o jogador clica no icone de fechar
 	queue_free() #excluindo a janela
 	
+func _ready() -> void:
+	Titulo.text = Titulotest
 
 func _input(event): #função chamada quando um evento acontece
 	if Input.is_action_just_pressed("LeftMouseDown"): # If para detectar se o evento ocorrido foi a o botão esquerdo do mouse sendo pressionado
+		print(Titulo, " Nome da janela")
 		var rect = get_global_rect() # Retorna uma variavel do tipo Rect2 onde vai ter a posição da Janela e o Tamanho
 		var localMousePos = event.position - get_global_position() # Retorna a posição do mouse em relação a Janela
-		if localMousePos.y < grabThreshold: # Detecta se o Mouse está na area para ser movido 
+		if localMousePos.y < grabThreshold && localMousePos.y > 0 && localMousePos.x < rect.size.x && localMousePos.x > 0: # Detecta se o Mouse está na area para ser movido 
 			start = event.position # Captura a Posição Inicial do Mouse
 			initialPosition = get_global_position() # Captura a Posição Inicial da Tela
 			isMoving = true 
