@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://ctf1rx04hb2ln"]
 
 [ext_resource type="StyleBox" uid="uid://cyb0wbjqluwbx" path="res://Styles/Fundo janelas.tres" id="1_42s2y"]
-[ext_resource type="Script" uid="uid://d22ndn8yq0urn" path="res://Cenas/janelaPadrao.gd" id="1_cekff"]
+[ext_resource type="Script" uid="uid://d22ndn8yq0urn" path="res://Scripts/janelaPadrao.gd" id="1_cekff"]
 [ext_resource type="Texture2D" uid="uid://cgscbwmttdfv5" path="res://sprites/icon_white.svg" id="2_nowvy"]
 [ext_resource type="Texture2D" uid="uid://dw4jbrduipofc" path="res://sprites/icon_blue.svg" id="3_42s2y"]
 [ext_resource type="Texture2D" uid="uid://bee5l7ww4tvmh" path="res://sprites/icon_red.svg" id="4_fqa4v"]
@@ -32,6 +32,7 @@ alignment = 2
 [node name="Titulo" type="Label" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 1
 text = "texto brabo"
 label_settings = SubResource("LabelSettings_fqa4v")
 autowrap_trim_flags = 0
@@ -68,10 +69,11 @@ size_flags_vertical = 3
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/PanelContainer"]
 layout_mode = 2
-horizontal_scroll_mode = 2
+horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
 
 [node name="Control" parent="VBoxContainer/PanelContainer/ScrollContainer" instance=ExtResource("5_nowvy")]
 layout_mode = 2
+size_flags_vertical = 3
 
 [connection signal="button_down" from="VBoxContainer/HBoxContainer/FecharIcone" to="." method="_on_fechar_icone_button_down"]

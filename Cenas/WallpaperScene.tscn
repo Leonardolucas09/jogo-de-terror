@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b33gjlsk70pkm"]
 
-[ext_resource type="Script" uid="uid://cbah5caw1gkcb" path="res://getWallpaperCode.gd" id="1_m5nho"]
+[ext_resource type="Script" uid="uid://cbah5caw1gkcb" path="res://Scripts/getWallpaperCode.gd" id="1_m5nho"]
 [ext_resource type="Texture2D" uid="uid://c87lfd21autur" path="res://sprites/wallpaper padrao.jpg" id="1_xqhwj"]
 
 [node name="Control" type="Control"]

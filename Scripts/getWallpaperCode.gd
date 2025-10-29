@@ -15,4 +15,4 @@ func _ready() -> void:
 	var image = Image.load_from_file(pathWallpaper)
 	var textureI = ImageTexture.create_from_image(image)
 	
-	texture = textureI
+	#texture = textureI
