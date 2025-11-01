@@ -1,229 +1,71 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1jj5g136x4wc"]
+[gd_scene load_steps=3 format=3 uid="uid://d1jj5g136x4wc"]
 
 [ext_resource type="Texture2D" uid="uid://db25k11hfysgv" path="res://sprites/icon.svg" id="1_laiov"]
-[ext_resource type="Texture2D" uid="uid://dw4jbrduipofc" path="res://sprites/icon_blue.svg" id="2_lh11r"]
-[ext_resource type="Texture2D" uid="uid://d4lauovvesmfj" path="res://sprites/icon_green.svg" id="3_hpvtw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_laiov"]
+font_size = 30
 
 [node name="Control" type="Control"]
-clip_contents = true
-custom_minimum_size = Vector2(1000, 1000)
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1155.0
-offset_bottom = 1216.0
-size_flags_horizontal = 0
-size_flags_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 920.0
+anchor_bottom = 1.9810001
+offset_right = 6.0
+offset_bottom = 0.31201172
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.12200001
+offset_bottom = 1124.352
 grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.12900001
+offset_bottom = 1121.751
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
+text = "ALGO NORMAL"
+label_settings = SubResource("LabelSettings_laiov")
+horizontal_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("1_laiov")
-stretch_mode = 1
-
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("2_lh11r")
-stretch_mode = 1
-
-[node name="TextureRect3" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("3_hpvtw")
-stretch_mode = 1
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "Ollllaaaaaaa"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_laiov")
-stretch_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-texture = ExtResource("2_lh11r")
-stretch_mode = 1
-
-[node name="TextureRect3" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-texture = ExtResource("3_hpvtw")
-stretch_mode = 1
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "Ollllaaaaaaa"
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer3"]
+[node name="TextureRect2" type="TextureRect" parent="Panel/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_laiov")
-stretch_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/HBoxContainer3"]
-layout_mode = 2
-texture = ExtResource("2_lh11r")
-stretch_mode = 1
-
-[node name="TextureRect3" type="TextureRect" parent="VBoxContainer/HBoxContainer3"]
-layout_mode = 2
-texture = ExtResource("3_hpvtw")
-stretch_mode = 1
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "Ollllaaaaaaa"
-
-[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer4"]
+[node name="TextureRect3" type="TextureRect" parent="Panel/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_laiov")
-stretch_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/HBoxContainer4"]
-layout_mode = 2
-texture = ExtResource("2_lh11r")
-stretch_mode = 1
-
-[node name="TextureRect3" type="TextureRect" parent="VBoxContainer/HBoxContainer4"]
-layout_mode = 2
-texture = ExtResource("3_hpvtw")
-stretch_mode = 1
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "Ollllaaaaaaa"
-
-[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer5"]
+[node name="TextureRect4" type="TextureRect" parent="Panel/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_laiov")
-stretch_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/HBoxContainer5"]
-layout_mode = 2
-texture = ExtResource("2_lh11r")
-stretch_mode = 1
-
-[node name="TextureRect3" type="TextureRect" parent="VBoxContainer/HBoxContainer5"]
-layout_mode = 2
-texture = ExtResource("3_hpvtw")
-stretch_mode = 1
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer5"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "Ollllaaaaaaa"
-
-[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer6"]
+[node name="TextureRect5" type="TextureRect" parent="Panel/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_laiov")
-stretch_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/HBoxContainer6"]
-layout_mode = 2
-texture = ExtResource("2_lh11r")
-stretch_mode = 1
-
-[node name="TextureRect3" type="TextureRect" parent="VBoxContainer/HBoxContainer6"]
-layout_mode = 2
-texture = ExtResource("3_hpvtw")
-stretch_mode = 1
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer6"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "Ollllaaaaaaa"
-
-[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer7"]
+[node name="TextureRect6" type="TextureRect" parent="Panel/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_laiov")
-stretch_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/HBoxContainer7"]
-layout_mode = 2
-texture = ExtResource("2_lh11r")
-stretch_mode = 1
-
-[node name="TextureRect3" type="TextureRect" parent="VBoxContainer/HBoxContainer7"]
-layout_mode = 2
-texture = ExtResource("3_hpvtw")
-stretch_mode = 1
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer7"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "Ollllaaaaaaa"
-
-[node name="HBoxContainer8" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer8"]
+[node name="TextureRect7" type="TextureRect" parent="Panel/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_laiov")
-stretch_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/HBoxContainer8"]
-layout_mode = 2
-texture = ExtResource("2_lh11r")
-stretch_mode = 1
-
-[node name="TextureRect3" type="TextureRect" parent="VBoxContainer/HBoxContainer8"]
-layout_mode = 2
-texture = ExtResource("3_hpvtw")
-stretch_mode = 1
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer8"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "Ollllaaaaaaa"
-
-[node name="HBoxContainer9" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer9"]
+[node name="TextureRect8" type="TextureRect" parent="Panel/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_laiov")
-stretch_mode = 1
-
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/HBoxContainer9"]
-layout_mode = 2
-texture = ExtResource("2_lh11r")
-stretch_mode = 1
-
-[node name="TextureRect3" type="TextureRect" parent="VBoxContainer/HBoxContainer9"]
-layout_mode = 2
-texture = ExtResource("3_hpvtw")
-stretch_mode = 1
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer9"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "Ollllaaaaaaa"
