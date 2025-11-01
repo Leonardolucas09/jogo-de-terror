@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqyhb2esfjgtu"]
+
+[ext_resource type="Texture2D" uid="uid://dm5ur1gasifli" path="res://Sprites/Background.png" id="1_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://c6qv0n24blw0l" path="res://Cenas/player.tscn" id="2_sb71q"]
+[ext_resource type="PackedScene" uid="uid://d1amlh3ihm2ew" path="res://Cenas/caixa.tscn" id="3_1uiq2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
+size = Vector2(1151, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
+size = Vector2(38.5, 146.5)
+
+[node name="World" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577, 327)
+scale = Vector2(0.7074074, 0.6018519)
+texture = ExtResource("1_fj7yv")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+freeze = true
+freeze_mode = 1
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(577, 677)
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(1163, 580)
+shape = SubResource("RectangleShape2D_tlwt5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(572, 480)
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-14, 579)
+shape = SubResource("RectangleShape2D_tlwt5")
+
+[node name="Player" parent="." instance=ExtResource("2_sb71q")]
+position = Vector2(604, 575)
+
+[node name="Caixa" parent="." instance=ExtResource("3_1uiq2")]
+position = Vector2(295, 544)

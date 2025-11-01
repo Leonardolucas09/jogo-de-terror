@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1amlh3ihm2ew"]
+
+[ext_resource type="Script" uid="uid://bqehjtnupfhep" path="res://Scripts/caixa.gd" id="1_7hun5"]
+[ext_resource type="Texture2D" uid="uid://b8k3oh3m28n4" path="res://Sprites/Interativo.png" id="2_lk50m"]
+[ext_resource type="PackedScene" uid="uid://bg5a7xx7dsh1w" path="res://Interaction/Interaction area/Interaction_area.tscn" id="3_208fa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3l7px"]
+size = Vector2(80, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hun5"]
+size = Vector2(70, 46)
+
+[node name="Caixa" type="Node2D"]
+script = ExtResource("1_7hun5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(39.75, 24)
+scale = Vector2(0.26806086, 0.24731185)
+texture = ExtResource("2_lk50m")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_208fa")]
+action_name = "busca"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(40, 24.5)
+shape = SubResource("RectangleShape2D_3l7px")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+freeze = true
+freeze_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(40, 24)
+shape = SubResource("RectangleShape2D_7hun5")
